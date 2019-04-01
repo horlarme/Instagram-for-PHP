@@ -542,11 +542,14 @@ class Client {
      * Access Token Setter
      *
      * @param object|string $data
-     * @return void
+     *
+     * @return $this
      */
     public function setAccessToken($data) {
         (true === is_object($data)) ? $token = $data->access_token : $token = $data;
         $this->_accesstoken = $token;
+
+        return $this;
     }
 
     /**
